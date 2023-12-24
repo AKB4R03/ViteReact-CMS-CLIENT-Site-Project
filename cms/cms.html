@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body class="bg-slate-800">
+  <!-- navbar -->
+  <div class="navbar bg-slate-800 text-neutral-content shadow-2xl">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl">KaneBato</a>
+    </div>
+    <div class="flex-none gap-2">
+      <div class="form-control">
+        <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+      </div>
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+          <div class="w-10 rounded-full">
+            <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          </div>
+        </label>
+        <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+          <li>
+            <a class="justify-between">
+              Profile
+              <span class="badge">New</span>
+            </a>
+          </li>
+          <li><a>Settings</a></li>
+          <li><a>Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- login form -->
+  <section class="bg-slate-800" style="display: block;">
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+      <div
+        class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+          <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+            Sign in to your account
+          </h1>
+          <form class="space-y-4 md:space-y-6" action="#">
+            <div>
+              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+              <input type="email" name="email" id="email"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="name@company.com">
+            </div>
+            <div>
+              <label for="password"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+              <input type="password" name="password" id="password" placeholder="••••••••"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required="">
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-start">
+                <div class="flex items-center h-5">
+                  <input id="remember" aria-describedby="remember" type="checkbox"
+                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
+                    required="">
+                </div>
+                <div class="ml-3 text-sm">
+                  <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
+                </div>
+              </div>
+              <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot
+                password?</a>
+            </div>
+            <button type="submit" class="btn btn-outline btn-default my-5 text-black"
+              onclick="my_modal_1.showModal()">Sign in</button>
+            <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+              Don’t have an account yet? <a href="#"
+                class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- add-user form -->
+  <section class="bg-slate-800" style="display: block;">
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+      <div
+        class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+          <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+            Sign up your account
+          </h1>
+          <form class="space-y-4 md:space-y-6" action="#">
+            <div>
+              <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                username</label>
+              <input type="username" name="username" id="username"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="user one">
+            </div>
+            <div>
+              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+              <input type="email" name="email" id="email"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="name@company.com">
+            </div>
+            <div>
+              <label for="password"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+              <input type="password" name="password" id="password" placeholder="••••••••"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </div>
+            <div>
+              <label for="phoneNumber" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your phone
+                number</label>
+              <input type="phoneNumber" name="phoneNumber" id="phoneNumber"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="08080808080">
+            </div>
+            <div>
+              <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                address</label>
+              <input type="address" name="address" id="address"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="jl blablabli">
+            </div>
+            <button type="submit" class="btn btn-outline btn-default my-5 text-black"
+              onclick="my_modal_1.showModal()">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- table info -->
+
+  <div class="overflow-x-auto">
+    <table class="table ">
+      <thead>
+        <tr>
+          <th class="text-white">Name</th>
+          <th class="text-white">Description</th>
+          <th class="text-white">Price</th>
+          <th class="text-white">ImgURL</th>
+          <th class="text-white">CategoryId</th>
+          <th class="text-white">AuthorId</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-white">Ayam geprek</td>
+          <td class="text-white">ini recommend banget</td>
+          <td class="text-white">Rp 300,000,00 </td>
+          <td class="text-white">/images/stock/photo-1534528741775-53994a69daeb.jpg</td>
+          <td class="text-white">2</td>
+          <td class="text-white">1</td>
+        </tr>
+        <tr>
+          <td class="text-white">Ayam geprek</td>
+          <td class="text-white">ini recommend banget</td>
+          <td class="text-white">Rp 300,000,00 </td>
+          <td class="text-white">/images/stock/photo-1534528741775-53994a69daeb.jpg</td>
+          <td class="text-white">2</td>
+          <td class="text-white">1</td>
+        </tr>
+        <tr>
+          <td class="text-white">Ayam geprek</td>
+          <td class="text-white">ini recommend banget</td>
+          <td class="text-white">Rp 300,000,00 </td>
+          <td class="text-white">/images/stock/photo-1534528741775-53994a69daeb.jpg</td>
+          <td class="text-white">2</td>
+          <td class="text-white">1</td>
+        </tr>
+        <tr>
+          <td class="text-white">Ayam geprek</td>
+          <td class="text-white">ini recommend banget</td>
+          <td class="text-white">Rp 300,000,00 </td>
+          <td class="text-white">/images/stock/photo-1534528741775-53994a69daeb.jpg</td>
+          <td class="text-white">2</td>
+          <td class="text-white">1</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- create form -->
+  <section class="bg-slate-800 my-20" style="display: block;">
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+      <div
+        class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+          <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+            Create New Cuisine
+          </h1>
+          <form class="space-y-4 md:space-y-6" action="#">
+            <div>
+              <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name
+                cuisine</label>
+              <input type="name" name="name" id="name"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="cosang">
+            </div>
+            <div>
+              <label for="description"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+              <textarea name="description" id="" cols="30" rows="5" placeholder="description"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+            </div>
+            <div>
+              <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price
+                cuisine</label>
+              <input type="number" name="price" id="price"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="500">
+            </div>
+            <div>
+              <label for="imgUrl" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Image
+                cuisine</label>
+              <input type="imgUrl" name="imgUrl" id="imgUrl"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="">
+            </div>
+            <div>
+              <label for="imgUrl" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
+              <select name="categoryId" required
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option value="" disabled selected>Category</option>
+                <option value="option-1">Option 1</option>
+                <option value="option-2">Option 2</option>
+                <option value="option-3">Option 3</option>
+              </select>
+            </div>
+            <div>
+              <label for="authorId" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Author</label>
+              <select name="authorId" required
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option value="" disabled selected>Author</option>
+                <option value="option-1">Option 1</option>
+                <option value="option-2">Option 2</option>
+                <option value="option-3">Option 3</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-outline btn-default my-5 text-black"
+              onclick="my_modal_1.showModal()">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- update form -->
+  <section class="bg-slate-800 my-1 py-2.5" style="display: block;">
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+      <div
+        class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+          <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+            Update Cuisine
+          </h1>
+          <form class="space-y-4 md:space-y-6" action="#">
+            <div>
+              <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name
+                cuisine</label>
+              <input type="name" name="name" id="name"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="cosang">
+            </div>
+            <div>
+              <label for="description"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+              <textarea name="description" id="" cols="30" rows="5" placeholder="description"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+            </div>
+            <div>
+              <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price
+                cuisine</label>
+              <input type="number" name="price" id="price"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="500">
+            </div>
+            <div>
+              <label for="imgUrl" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Image
+                cuisine</label>
+              <input type="imgUrl" name="imgUrl" id="imgUrl"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="">
+            </div>
+            <div>
+              <label for="imgUrl" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
+              <select name="categoryId" required
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option value="" disabled selected>Category</option>
+                <option value="option-1">Option 1</option>
+                <option value="option-2">Option 2</option>
+                <option value="option-3">Option 3</option>
+              </select>
+            </div>
+            <div>
+              <label for="authorId" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Author</label>
+              <select name="authorId" required
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option value="" disabled selected>Author</option>
+                <option value="option-1">Option 1</option>
+                <option value="option-2">Option 2</option>
+                <option value="option-3">Option 3</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-outline btn-default my-5 text-black"
+              onclick="my_modal_1.showModal()">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upload Image -->
+  <section class="bg-slate-800" style="display: block;">
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+      <div
+        class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+          <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+            Sign in to your account
+          </h1>
+          <form class="space-y-4 md:space-y-6" action="#">
+            <img class="w-full rounded-box"
+              src="https://ik.imagekit.io/q7pvfvakd/download_fzKMvrwNK.jpeg?updatedAt=1699032991278" alt="">
+            <div class="font-bold text-xl mb-2">Ayam Kecap </div>
+
+            <div class="upload-container relative flex items-center justify-between w-full">
+              <div
+                class="drop-area w-full rounded-md border-2 border-dotted border-gray-200 transition-all hover:border-blue-600/30 text-center">
+                <label for="file-input" class="block w-full h-full text-gray-500 p-4 text-sm cursor-pointer">
+                  Drop your image here or click to browse
+                </label>
+                <input name="imgData" type="file" id="file-input" accept="image/*" class="hidden" />
+                <!-- Image upload input -->
+                <div class="preview-container hidden items-center justify-center flex-col">
+                  <div class="preview-image w-36 h-36 bg-cover bg-center rounded-md"></div>
+                  <span class="file-name my-4 text-sm font-medium"></span>
+                  <p
+                    class="close-button cursor-pointer transition-all mb-4 rounded-md px-3 py-1 border text-xs text-red-500 border-red-500 hover:bg-red-500 hover:text-white">
+                    Delete</p>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-outline btn-default my-5 text-black"
+              onclick="my_modal_1.showModal()">Sign in</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="overflow-x-auto">
+    <table class="table ">
+      <thead>
+        <tr>
+          <th class="text-white">Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-white"> Desserts </td>
+        </tr>
+        <tr>
+          <td class="text-white"> Beverages </td>
+        </tr>
+        <tr>
+          <td class="text-white"> Snacks </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

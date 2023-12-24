@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-800">
+  <!-- navbar -->
+  <div class="navbar bg-slate-800 text-neutral-content shadow-xl">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl">KaneBato</a>
+    </div>
+    <div class="flex-none gap-2">
+      <div class="form-control">
+        <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+      </div>
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+          <div class="w-10 rounded-full">
+            <img src="/assets2/Bibimbap _ Recipe _ Asian recipes, Recipetin eats, Bibimbap recipe.jpg" />
+          </div>
+        </label>
+        <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+          <li>
+            <a class="justify-between">
+              Profile
+              <span class="badge">New</span>
+            </a>
+          </li>
+          <li><a>Settings</a></li>
+          <li><a>Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- card -->
+  <div class="flex justify-evenly my-5 mx-5 grid grid-cols-4 gap-4 place-content-center ">
+    <div class="max-w-sm rounded-box overflow-hidden shadow-lg bg-slate-700 w-[75]">
+      <img class="w-full" src="https://ik.imagekit.io/q7pvfvakd/download_fzKMvrwNK.jpeg?updatedAt=1699032991278"
+        alt="Sunset in the mountains">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2 text-white">Ayam Kecap Bango</div>
+        <button class="btn btn-outline btn-default my-5 text-white" onclick="my_modal_1.showModal()">Detail</button>
+      </div>
+    </div>
+
+    <div class="max-w-sm rounded-box overflow-hidden shadow-lg bg-slate-700">
+      <img class="w-full" src="https://ik.imagekit.io/q7pvfvakd/download_fzKMvrwNK.jpeg?updatedAt=1699032991278"
+        alt="Sunset in the mountains">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2 text-white">Ayam Kecap Bango</div>
+        <button class="btn btn-outline btn-default my-5 text-white" onclick="my_modal_1.showModal()">Detail</button>
+      </div>
+    </div>
+
+    <div class="max-w-sm rounded-box overflow-hidden shadow-lg bg-slate-700">
+      <img class="w-full" src="https://ik.imagekit.io/q7pvfvakd/download_fzKMvrwNK.jpeg?updatedAt=1699032991278"
+        alt="Sunset in the mountains">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2 text-white">Ayam Kecap Bango</div>
+        <button class="btn btn-outline btn-default my-5 text-white" onclick="my_modal_1.showModal()">Detail</button>
+      </div>
+    </div>
+
+    <div class="max-w-sm rounded-box overflow-hidden shadow-lg bg-slate-700">
+      <img class="w-full" src="https://ik.imagekit.io/q7pvfvakd/download_fzKMvrwNK.jpeg?updatedAt=1699032991278"
+        alt="Sunset in the mountains">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2 text-white">Ayam Kecap Bango</div>
+        <button class="btn btn-outline btn-default my-5 text-white" onclick="my_modal_1.showModal()">Detail</button>
+      </div>
+    </div>
+
+    <div class="max-w-sm rounded-box overflow-hidden shadow-lg bg-slate-700">
+      <img class="w-full" src="https://ik.imagekit.io/q7pvfvakd/download_fzKMvrwNK.jpeg?updatedAt=1699032991278"
+        alt="Sunset in the mountains">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2 text-white">Ayam Kecap Bango</div>
+        <button class="btn btn-outline btn-default my-5 text-white" onclick="my_modal_1.showModal()"
+          onclick="myFunction()">Detail</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- detail -->
+  <dialog id="my_modal_1" class="modal">
+    <form method="dialog" class="modal-box rounded-box">
+      <img class="w-full rounded-box"
+        src="https://ik.imagekit.io/q7pvfvakd/download_fzKMvrwNK.jpeg?updatedAt=1699032991278"
+        alt="Sunset in the mountains">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2 text-white">The Coldest Sunset</div>
+        <p class="py-8">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque repellat amet accusantium aliquid nisi
+          totam reiciendis exercitationem perspiciatis officia dolores alias deserunt reprehenderit, voluptas voluptate
+          voluptates nihil sapiente, nulla vero?
+        </p>
+        <p class="py-8">
+          Rp 300,000,00
+        </p>
+        <button class="btn btn-outline btn-default my-5">Pesan</button>
+      </div>
+      <!-- </div> -->
+      <!-- </section> -->
+    </form>
+  </dialog>
+
+</body>
+
+</html>
